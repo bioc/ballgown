@@ -62,7 +62,7 @@ test_that('splitting attribute fields works', {
 #         sort(unique(getAttributeField(x$attributes, 'transcript_id')))))
 # })
 
-# grl = gffReadGR(gtfPath, splitByTranscript=TRUE)
+grl = gffReadGR(gtfPath, splitByTranscript=TRUE)
 
 test_that('pctOverlap function works', {
     expect_that(pctOverlap(structure(bg)$trans[[2]], grl[[369]]), 
