@@ -83,15 +83,15 @@ test_that('function for annotating assemblies works', {
     expect_that(rel$percent[6], equals(0.8032030, tolerance=0.001))
 })
 
-test_that('function for labeling assembled transcripts with genes works', {
-    expect_that(getGenes(gtfPath, structure(bg)$trans, UCSC=FALSE), 
-        not(throws_error()))
-    geneoverlaps = getGenes(gtfPath, structure(bg)$trans, UCSC=FALSE)
-    expect_that(geneoverlaps, is_a('CharacterList'))
-    expect_that(geneoverlaps[[2]], equals('ENSG00000229027'))
-    expect_that(length(geneoverlaps[[4]]), equals(2))
-    expect_that(length(geneoverlaps), equals(100))
-})
+# test_that('function for labeling assembled transcripts with genes works', {
+#     expect_that(getGenes(gtfPath, structure(bg)$trans, UCSC=FALSE), 
+#         not(throws_error()))
+#     geneoverlaps = getGenes(gtfPath, structure(bg)$trans, UCSC=FALSE)
+#     expect_that(geneoverlaps, is_a('CharacterList'))
+#     expect_that(geneoverlaps[[2]], equals('ENSG00000229027'))
+#     expect_that(length(geneoverlaps[[4]]), equals(2))
+#     expect_that(length(geneoverlaps), equals(100))
+# })
 
 test_that('contains function works', {
     expect_that(contains(structure(bg)$trans, grl), is_a('logical'))
