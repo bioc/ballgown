@@ -98,7 +98,7 @@ setGeneric("gexpr", function(x) standardGeneric("gexpr"))
 #' @export
 #' @docType methods
 #' @rdname seqnames
-#' @importFrom GenomeInfoDb seqnames
+#' @importFrom Seqinfo seqnames
 setGeneric("seqnames")
 
 #' @name transcriptIDs
